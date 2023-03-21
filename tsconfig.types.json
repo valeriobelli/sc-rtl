@@ -1,0 +1,10 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"tsBuildInfoFile": ".cache/ts/.tsbuildinfo.types.tsbuildinfo",
+		"outDir": "typings"
+	},
+	"include": ["src/index.ts", "types"]
+}

@@ -1,0 +1,8 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"tsBuildInfoFile": ".cache/ts/.tsbuildinfo.lib.tsbuildinfo",
+		"target": "es2015"
+	},
+	"include": ["src/index.ts", "types"]
+}

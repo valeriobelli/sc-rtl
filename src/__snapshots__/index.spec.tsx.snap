@@ -1,0 +1,33 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`rtl > lefts intact styles when in ltr 1`] = `
+.c0 {
+  margin-left: 16px;
+}
+
+<div
+  class="c0"
+/>
+`;
+
+exports[`rtl > lefts intact styles when in rtl not applied to "rtl" template literal 1`] = `
+.c0 {
+  margin-left: 16px;
+}
+
+<div
+  class="c0"
+/>
+`;
+
+exports[`rtl > reverses styles when in rtl and the styles are applied to "rtl" template literal 1`] = `
+.c0 {
+  margin-right: 16px;
+  text-align: left;
+  padding-left: 8px;
+}
+
+<div
+  class="c0"
+/>
+`;

@@ -1,0 +1,42 @@
+{
+	"[jsonc]": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true
+		},
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[markdown]": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true
+		},
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+	},
+	"[typescript]": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true,
+			"source.organizeImports": true
+		},
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true,
+			"source.organizeImports": true
+		},
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[yaml]": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true
+		},
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"editor.formatOnSave": true,
+	"eslint.probe": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+	"files.insertFinalNewline": true,
+	"files.trimTrailingWhitespace": true,
+	"typescript.format.enable": false,
+	"typescript.preferences.importModuleSpecifier": "shortest",
+	"typescript.preferences.quoteStyle": "single",
+	"typescript.tsdk": "node_modules/typescript/lib"
+}

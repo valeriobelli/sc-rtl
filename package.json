@@ -1,0 +1,58 @@
+{
+	"name": "styled-components-rtl",
+	"version": "1.0.0",
+	"description": "A little abstraction over cssjanus to handle RTL layouts with styled-components",
+	"type": "module",
+	"main": "dist/index.cjs",
+	"module": "dist/index.mjs",
+	"types": "typings/index.d.ts",
+	"repository": "https://github.com/valeriobelli/styled-components-rtl",
+	"author": "Valerio Belli <belli.valerio@outlook.com>",
+	"license": "MIT",
+	"packageManager": "yarn@3.5.0",
+	"scripts": {
+		"build": "yarn build:lib && yarn build:types",
+		"build:lib": "node esbuild.config.js",
+		"build:types": "tsc -p tsconfig.types.json",
+		"lint": "eslint --format codeframe --ext tsx,ts src",
+		"test": "vitest",
+		"typecheck": "yarn typecheck:lib && yarn typecheck:test",
+		"typecheck:lib": "tsc -p tsconfig.lib.json --noEmit",
+		"typecheck:test": "tsc -p tsconfig.test.json --noEmit"
+	},
+	"devDependencies": {
+		"@tsconfig/strictest": "1.0.2",
+		"@types/react": "^18.0.28",
+		"@types/styled-components": "5.1.26",
+		"@typescript-eslint/eslint-plugin": "^5.56.0",
+		"@typescript-eslint/parser": "^5.56.0",
+		"cssjanus": "^2.0.0",
+		"esbuild": "0.17.12",
+		"eslint": "^8.36.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-formatter-codeframe": "^7.32.1",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-jsx-a11y": "^6.7.1",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-testing-library": "^5.10.2",
+		"happy-dom": "^8.9.0",
+		"jest-styled-components": "^7.1.1",
+		"prettier": "^2.8.5",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0",
+		"styled-components": "^5.0.0",
+		"typescript": "5.0.2",
+		"vitest": "^0.29.7"
+	},
+	"peerDependencies": {
+		"cssjanus": "^2.0.0",
+		"react": "^18.0.0",
+		"styled-components": "^5.0.0"
+	},
+	"dependencies": {
+		"@testing-library/react": "^14.0.0",
+		"tslib": "^2.5.0"
+	}
+}

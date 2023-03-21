@@ -1,0 +1,232 @@
+{
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"es6": true,
+		"node": true
+	},
+	"extends": [
+		"airbnb",
+		"airbnb/hooks",
+		"plugin:import/typescript",
+		"plugin:react/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:@typescript-eslint/strict",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"prettier"
+	],
+	"globals": {
+		"process": true
+	},
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["import", "react", "react-hooks"],
+	"root": true,
+	"rules": {
+		"@typescript-eslint/consistent-type-definitions": ["error", "type"],
+		"@typescript-eslint/consistent-type-imports": "error",
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/explicit-member-accessibility": [
+			"error",
+			{
+				"accessibility": "no-public"
+			}
+		],
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/interface-name-prefix": "off",
+		"@typescript-eslint/no-dynamic-delete": "error",
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-invalid-this": "error",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/no-shadow": "error",
+		"@typescript-eslint/no-throw-literal": "error",
+		"@typescript-eslint/no-unused-vars": "off",
+		"@typescript-eslint/no-useless-constructor": "error",
+		"@typescript-eslint/no-var-requires": "off",
+		"@typescript-eslint/padding-line-between-statements": [
+			"error",
+			{
+				"blankLine": "always",
+				"next": "return",
+				"prev": "*"
+			},
+			{
+				"blankLine": "always",
+				"next": "*",
+				"prev": ["const", "let"]
+			},
+			{
+				"blankLine": "always",
+				"next": ["const", "let"],
+				"prev": "*"
+			},
+			{
+				"blankLine": "any",
+				"next": ["singleline-const", "singleline-let"],
+				"prev": ["singleline-const", "singleline-let"]
+			},
+			{
+				"blankLine": "always",
+				"next": "*",
+				"prev": "directive"
+			},
+			{
+				"blankLine": "any",
+				"next": "directive",
+				"prev": "directive"
+			},
+			{
+				"blankLine": "always",
+				"next": "block-like",
+				"prev": "*"
+			},
+			{
+				"blankLine": "always",
+				"next": "*",
+				"prev": "block-like"
+			},
+			{
+				"blankLine": "always",
+				"next": "*",
+				"prev": "multiline-expression"
+			},
+			{
+				"blankLine": "always",
+				"next": "multiline-expression",
+				"prev": "*"
+			},
+			{
+				"blankLine": "always",
+				"next": "*",
+				"prev": ["interface", "type"]
+			},
+			{
+				"blankLine": "always",
+				"next": ["interface", "type"],
+				"prev": "*"
+			}
+		],
+		"@typescript-eslint/prefer-interface": "off",
+		"@typescript-eslint/prefer-optional-chain": "error",
+		"arrow-body-style": ["error", "as-needed"],
+		"curly": ["error", "all"],
+		"default-param-last": "off",
+		"global-require": "off",
+		"import/extensions": "off",
+		"import/no-cycle": "off",
+		"import/no-deprecated": "error",
+		"import/no-extraneous-dependencies": [
+			"error",
+			{
+				"devDependencies": [
+					"**/*.js",
+					"**/*.spec.ts",
+					"**/*.spec.tsx",
+					"**/vitest.*.ts",
+					"**/metro.config.js",
+					"tools/**/*"
+				],
+				"packageDir": ["."]
+			}
+		],
+		"import/no-unresolved": "off",
+		"import/order": "off",
+		"import/prefer-default-export": "off",
+		"max-len": "off",
+		"no-invalid-this": "off",
+		"no-shadow": "off",
+		"no-tabs": [
+			"error",
+			{
+				"allowIndentationTabs": true
+			}
+		],
+		"no-undef": "off",
+		"no-underscore-dangle": [
+			"error",
+			{
+				"allow": ["__DATA__", "_KEY", "__typename"]
+			}
+		],
+		"no-unexpected-multiline": "off",
+		"no-unused-expressions": "off",
+		"no-use-before-define": "off",
+		"no-useless-constructor": "off",
+		"padding-line-between-statements": "off",
+		"react/display-name": "error",
+		"react/function-component-definition": [
+			"error",
+			{
+				"namedComponents": "arrow-function",
+				"unnamedComponents": "arrow-function"
+			}
+		],
+		"react/jsx-boolean-value": ["error", "never"],
+		"react/jsx-filename-extension": [
+			"error",
+			{
+				"extensions": [".tsx"]
+			}
+		],
+		"react/jsx-no-leaked-render": "off", // FIXME https://app.asana.com/0/1199706967634977/1202472426702747
+		"react/jsx-no-useless-fragment": "off",
+		"react/jsx-props-no-spreading": "off",
+		"react/jsx-sort-props": "error",
+		"react/jsx-uses-react": "off",
+		"react/no-unescaped-entities": [
+			"error",
+			{
+				"forbid": [
+					{
+						"alternatives": ["&gt;"],
+						"char": ">"
+					},
+					{
+						"alternatives": ["&quot;"],
+						"char": "\""
+					},
+					{
+						"alternatives": ["&#125;"],
+						"char": "}"
+					}
+				]
+			}
+		],
+		"react/no-unstable-nested-components": [
+			"error",
+			{
+				"allowAsProps": true
+			}
+		],
+		"react/no-unused-prop-types": "error",
+		"react/react-in-jsx-scope": "off",
+		"react/require-default-props": "off",
+		"react/state-in-constructor": ["error", "never"],
+		"sort-keys": [
+			"error",
+			"asc",
+			{
+				"natural": true
+			}
+		],
+		"spaced-comment": [
+			"error",
+			"always",
+			{
+				"markers": ["/"]
+			}
+		]
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": ["mjs", "js", "ts", "tsx"]
+			}
+		},
+		"react": {
+			"version": "detect"
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": ".",
+		"ignoreDeprecations": "5.0",
+		"importHelpers": true,
+		"incremental": true,
+		"isolatedModules": true,
+		"jsx": "react-jsx",
+		"lib": ["esnext", "dom"],
+		"module": "es2022",
+		"moduleResolution": "node",
+		"skipDefaultLibCheck": true,
+		"paths": {
+			"~/*": ["src/*"]
+		},
+		"target": "es2017",
+		"types": ["react"]
+	},
+	"extends": "@tsconfig/strictest/tsconfig.json",
+	"include": ["*.ts", "*.js", "src", "types"]
+}
