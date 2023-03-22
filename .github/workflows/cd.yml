@@ -1,0 +1,33 @@
+name: CD
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  setup:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+
+      - name: setup
+        run: yarn install --immutable
+
+      - name: bundle
+        run: yarn build
+
+      - name: publish
+        run: |
+          yarn config set npmAuthToken $NPM_SECRET_KEY
+          yarn npm publish
+        env:
+          NPM_SECRET_KEY: ${{ secrets.NPM_SECRET_KEY }}

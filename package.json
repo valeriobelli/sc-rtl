@@ -1,5 +1,5 @@
 {
-	"name": "styled-components-rtl",
+	"name": "@vbstack/styled-components-rtl",
 	"version": "1.0.0",
 	"description": "A little abstraction over cssjanus to handle RTL layouts with styled-components",
 	"type": "module",
@@ -9,6 +9,11 @@
 	"repository": "https://github.com/valeriobelli/styled-components-rtl",
 	"author": "Valerio Belli <belli.valerio@outlook.com>",
 	"license": "MIT",
+	"files": [
+		"CHANGELOG.md",
+		"dist/",
+		"typings/"
+	],
 	"packageManager": "yarn@3.5.0",
 	"scripts": {
 		"build": "yarn build:lib && yarn build:types",
