@@ -14,6 +14,7 @@
 		"build": "yarn build:lib && yarn build:types",
 		"build:lib": "node esbuild.config.js",
 		"build:types": "tsc -p tsconfig.types.json",
+		"code-formatting": "prettier --check \"**/*.+(js|ts|tsx)\"",
 		"lint": "eslint --format codeframe --ext tsx,ts src",
 		"test": "vitest",
 		"typecheck": "yarn typecheck:lib && yarn typecheck:test",

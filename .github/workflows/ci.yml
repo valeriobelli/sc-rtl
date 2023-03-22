@@ -1,0 +1,40 @@
+name: "CI"
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+
+jobs:
+  CI:
+    name: "Checks"
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: setup
+        run: yarn --immutable
+
+      - name: typecheck
+        run: yarn typecheck
+
+      - name: test
+        run: yarn test
+
+      - name: lint
+        if: ${{ github.event_name == 'pull_request' }}
+        run: yarn lint
+
+      - name: code-formatting
+        if: ${{ github.event_name == 'pull_request' }}
+        run: yarn code-formatting
