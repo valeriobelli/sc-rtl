@@ -1,9 +1,9 @@
-# styled-components-rtl
+# sc-rtl
 
 ## Installation
 
 ```bash
-yarn add @vbstack/styled-components-rtl
+yarn add sc-rtl
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ To do that, you can just add the following into a `styled-components.d.ts` file
 
 ```typescript
 import 'styled-components'
-import type { ThemeProviderRtl } from '@vbstack/styled-components-rtl'
+import type { ThemeProviderRtl } from 'sc-rtl'
 
 declare module 'styled-components' {
  export interface DefaultTheme extends ThemeProviderRtl {}
@@ -28,7 +28,7 @@ Second thing is to inject the text direction into the ThemeProvider, as you can 
 
 ```typescript
 import { ThemeProvider } from "styled-components"
-import { rtl } from "styled-components-rtl"
+import { rtl } from "sc-rtl"
 
 const Card = styled.div<{ paddingLeft: number }>`
   ${rtl`

@@ -1,12 +1,12 @@
 {
-	"name": "@vbstack/styled-components-rtl",
+	"name": "sc-rtl",
 	"version": "1.0.0",
 	"description": "A little abstraction over cssjanus to handle RTL layouts with styled-components",
 	"type": "module",
 	"main": "dist/index.cjs",
 	"module": "dist/index.mjs",
 	"types": "typings/index.d.ts",
-	"repository": "https://github.com/valeriobelli/styled-components-rtl",
+	"repository": "https://github.com/valeriobelli/sc-rtl",
 	"author": "Valerio Belli <belli.valerio@outlook.com>",
 	"license": "MIT",
 	"files": [

@@ -796,43 +796,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vbstack/styled-components-rtl@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@vbstack/styled-components-rtl@workspace:."
-  dependencies:
-    "@testing-library/react": ^14.0.0
-    "@tsconfig/strictest": 1.0.2
-    "@types/react": ^18.0.28
-    "@types/styled-components": 5.1.26
-    "@typescript-eslint/eslint-plugin": ^5.56.0
-    "@typescript-eslint/parser": ^5.56.0
-    cssjanus: ^2.0.0
-    esbuild: 0.17.12
-    eslint: ^8.36.0
-    eslint-config-airbnb: ^19.0.4
-    eslint-config-prettier: ^8.8.0
-    eslint-formatter-codeframe: ^7.32.1
-    eslint-plugin-import: ^2.27.5
-    eslint-plugin-jsx-a11y: ^6.7.1
-    eslint-plugin-react: ^7.32.2
-    eslint-plugin-react-hooks: ^4.6.0
-    eslint-plugin-testing-library: ^5.10.2
-    happy-dom: ^8.9.0
-    jest-styled-components: ^7.1.1
-    prettier: ^2.8.5
-    react: ^18.0.0
-    react-dom: ^18.0.0
-    styled-components: ^5.0.0
-    tslib: ^2.5.0
-    typescript: 5.0.2
-    vitest: ^0.29.7
-  peerDependencies:
-    cssjanus: ^2.0.0
-    react: ^18.0.0
-    styled-components: ^5.0.0
-  languageName: unknown
-  linkType: soft
-
 "@vitest/expect@npm:0.29.7":
   version: 0.29.7
   resolution: "@vitest/expect@npm:0.29.7"
@@ -3813,6 +3776,43 @@ __metadata:
   checksum: cab8f25ae6f1434abee8d80023d7e72b598cf1327164ddab31003c51215526801e40b66c5e65d658a0af1e9d6478cadcb4c745f4bd6751f97d8644786c0978b0
   languageName: node
   linkType: hard
+
+"sc-rtl@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "sc-rtl@workspace:."
+  dependencies:
+    "@testing-library/react": ^14.0.0
+    "@tsconfig/strictest": 1.0.2
+    "@types/react": ^18.0.28
+    "@types/styled-components": 5.1.26
+    "@typescript-eslint/eslint-plugin": ^5.56.0
+    "@typescript-eslint/parser": ^5.56.0
+    cssjanus: ^2.0.0
+    esbuild: 0.17.12
+    eslint: ^8.36.0
+    eslint-config-airbnb: ^19.0.4
+    eslint-config-prettier: ^8.8.0
+    eslint-formatter-codeframe: ^7.32.1
+    eslint-plugin-import: ^2.27.5
+    eslint-plugin-jsx-a11y: ^6.7.1
+    eslint-plugin-react: ^7.32.2
+    eslint-plugin-react-hooks: ^4.6.0
+    eslint-plugin-testing-library: ^5.10.2
+    happy-dom: ^8.9.0
+    jest-styled-components: ^7.1.1
+    prettier: ^2.8.5
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    styled-components: ^5.0.0
+    tslib: ^2.5.0
+    typescript: 5.0.2
+    vitest: ^0.29.7
+  peerDependencies:
+    cssjanus: ^2.0.0
+    react: ^18.0.0
+    styled-components: ^5.0.0
+  languageName: unknown
+  linkType: soft
 
 "scheduler@npm:^0.23.0":
   version: 0.23.0
