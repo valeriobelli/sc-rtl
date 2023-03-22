@@ -1,13 +1,8 @@
 import { render } from '@testing-library/react'
 import type { PropsWithChildren } from 'react'
-import styled, { ThemeProvider as BaseThemeProvider, css } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 import { describe, expect, it } from 'vitest'
-import type { ThemeProviderLtrProps, WithLtrProps } from '.'
 import { rtl } from '.'
-
-const ThemeProvider = ({ children, theme }: PropsWithChildren<{ theme: ThemeProviderLtrProps }>) => (
-	<BaseThemeProvider theme={theme}>{children}</BaseThemeProvider>
-)
 
 describe('rtl', () => {
 	it('lefts intact styles when in ltr', () => {
@@ -39,18 +34,14 @@ describe('rtl', () => {
 	})
 
 	it('reverses styles when in rtl and the styles are applied to "rtl" template literal', () => {
-		const Component = styled.div`
+		const Component = styled.div<{ pl: number }>`
 			${rtl`
+				${({ theme: { dir } }) => (dir === 'ltr' ? 'text-align: left;' : 'text-align: right;')}
+
 				margin-left: 16px;
-
-				${css<WithLtrProps>`
-					${({ theme: { dir } }) => (dir === 'ltr' ? 'text-align: left;' : 'text-align: right;')}
-
-					padding-right: 8px;
-
-					@keyframes foo {
-					}
-				`}
+				padding-right: 8px;
+				padding-left: ${({ pl }) => pl}px;
+				@keyframes foo {}
 			`}
 		`
 
@@ -58,7 +49,7 @@ describe('rtl', () => {
 			<ThemeProvider theme={{ dir: 'rtl' }}>{children}</ThemeProvider>
 		)
 
-		const { container } = render(<Component />, { wrapper: Wrapper })
+		const { container } = render(<Component pl={4} />, { wrapper: Wrapper })
 
 		expect(container.firstChild).toMatchSnapshot()
 	})

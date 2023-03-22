@@ -22,9 +22,10 @@ exports[`rtl > lefts intact styles when in rtl not applied to "rtl" template lit
 
 exports[`rtl > reverses styles when in rtl and the styles are applied to "rtl" template literal 1`] = `
 .c0 {
-  margin-right: 16px;
   text-align: left;
+  margin-right: 16px;
   padding-left: 8px;
+  padding-right: 4px;
 }
 
 <div
